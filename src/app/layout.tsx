@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import Cursor from "@/components/Cursor";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+export const dmSans = DM_Sans({ subsets: ["latin"] });
+export const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jetBrainsMono.className} antialiased font-bold overflow-clip bg-[#e2e2d1]`}
       >
+        <Cursor />
+        <svg className="pointer-events-none absolute cursor-none">
+          <filter id="grainy">
+            <feTurbulence type="turbulence" baseFrequency="0.5"></feTurbulence>
+            <feColorMatrix type="saturate" values="0"></feColorMatrix>
+          </filter>
+        </svg>
         {children}
       </body>
     </html>
