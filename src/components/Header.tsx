@@ -13,7 +13,7 @@ export const Header = async () => {
     <header className="mb-10 mt-5 sm:mt-0">
       <WidthCtrlWrapper>
         <nav className="flex justify-between items-center gap-3 md:gap-16">
-          <AnimatedLogo text="cstm" font={dmSans.className} />
+          <AnimatedLogo text="cstm." font={dmSans.className} />
           <hr className="w-full border-2 border-accent-orange animate-scale-width" />
           <ul className="flex gap-2 md:gap-11">
             {user ? (
