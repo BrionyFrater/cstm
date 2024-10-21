@@ -8,10 +8,11 @@ export const Header = () => {
       <WidthCtrlWrapper>
         <nav className="flex justify-between items-center gap-3 md:gap-16">
           <h3
-            className={`${dmSans.className}  font-black text-3xl tracking-[-0.1rem] sm:text-6xl sm:tracking-[-0.35rem]`}
+            className={`${dmSans.className} leading-none font-black text-[15vw] tracking-[-1.5vw] sm:text-[10rem] sm:tracking-[-1rem] cursor-default`}
           >
             cstm.
           </h3>
+          <hr className="w-full h-[2px] border-slate-950" />
           <ul className="flex gap-2 md:gap-11">
             <li>
               <SlotButton text="Sign Up" link="/" />
