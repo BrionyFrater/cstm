@@ -1,27 +1,44 @@
+"use client";
+import { motion } from "framer-motion";
 
-'use client'
-import { useRef } from 'react';
-import { useGSAP } from '@gsap/react';
-import { dmSans } from '@/app/layout';
-
-const AnimatedHeader = ({ text }: {text: string;}) => {
-  const ref = useRef<HTMLHeadingElement>(null);
-
-  useGSAP(() => {
-    if(ref.current){
-        gsap.to(ref.current, {y: -200,  duration: 1})
-    }
-  }, {scope: ref})
-
-
+export const AnimatedLogo = ({
+  text,
+  font,
+}: {
+  text: string;
+  font?: string;
+}) => {
   return (
-    <h3
-      ref={ref}
-      className={`${dmSans.className} leading-none font-black text-[15vw] tracking-[-1.5vw] sm:text-[10rem] sm:tracking-[-1rem] cursor-default`}
+    <motion.h3
+      initial="initial"
+      animate="animate"
+      transition={{
+        staggerChildren: 0.07,
+      }}
+      className={`${font} leading-none font-black text-[15vw] tracking-[-1.5vw] sm:text-[10rem] sm:tracking-[-1rem] cursor-default`}
     >
-      {text}
-    </h3>
+      <div className="flex">
+        {text.split("").map((letter, indx) => {
+          return (
+            <motion.span
+              variants={{
+                initial: {
+                  y: "50%",
+                  scaleY: 0,
+                },
+                animate: {
+                  y: 0,
+                  scaleY: 1,
+                }
+              }}
+              className="inline-block"
+              key={indx}
+            >
+              {letter}
+            </motion.span>
+          );
+        })}
+      </div>
+    </motion.h3>
   );
 };
-
-export default AnimatedHeader;

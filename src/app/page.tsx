@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { WidthCtrlWrapper } from "@/components/WidthCtrlWrapper";
-
 export default function Home() {
   return (
     <>

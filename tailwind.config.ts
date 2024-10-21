@@ -64,13 +64,17 @@ const config: Config = {
         cursorEase: "cubic-bezier(.68,.55,.59,.95)",
       },
       animation: {
-        "pop-up": "pop-up 0.5s ease-out forwards",
+        "scale-width": "scale-width 0.5s 1s ease-out both",
       },
       keyframes: {
-        "pop-up": {
-          "0%": { transform: "translateY(100%)", opacity: "0"},
-          "100%": { transform: "translateY(0)", opacity: "1"},
+        "scale-width": {
+          "0%": { width: "0", border: "none" },
+          "10%": {border: "2px solid #e45a31" },
+          "100%": { width: "100%"},
         },
+      },
+      fontFamily: {
+        blocky: "var(--dm-sans)",
       },
     },
   },
