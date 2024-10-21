@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface WidthCtrlWrapperProps {
   className?: string;
   children: ReactNode;
-};
+}
 
 export const WidthCtrlWrapper = ({
   className,
