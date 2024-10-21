@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
 
-type WidthCtrlWrapperProps = {
+interface WidthCtrlWrapperProps {
   className?: string;
   children: ReactNode;
 };

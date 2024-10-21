@@ -35,6 +35,7 @@ const config: Config = {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          orange: "#e45a31"
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -52,6 +53,8 @@ const config: Config = {
         },
         darkerPink: "#e1dfde",
         mutedPink: "#f4f4f4",
+        tan: "#e2e2d1"
+        
       },
       borderRadius: {
         lg: "var(--radius)",

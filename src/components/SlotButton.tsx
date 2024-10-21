@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 
-export const SlotButton = ({ text, link }: { text: string; link: string }) => {
+interface SlotButtonProps { 
+  text: string; 
+  link: string;
+  className?: string;
+}
+
+export const SlotButton = ({ text, link, className }: SlotButtonProps) => {
   return (
     <Button
       variant={"outline"}
-      className="group shadow-none relative overflow-clip border-transparent bg-transparent hover:border-slate-950 px-2 hover:bg-transparent"
+      className={cn("group shadow-none relative overflow-clip border-transparent bg-transparent hover:border-slate-950 px-2 hover:bg-transparent", className)} 
     >
       <Link href={link} className="flex flex-col items-center">
         <p className="transition-all duration-300 ease-in-out group-hover:translate-y-[-150%]">

@@ -21,7 +21,7 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="hidden pointer-events-none size-3 rounded-full border  bg-white/80 mix-blend-difference transition-all duration-100 ease-cursorEase z-40 lg:block"
+      className="hidden pointer-events-none size-3 rounded-full border bg-white/80 mix-blend-difference transition-all duration-100 ease-cursorEase z-40 lg:block"
     ></div>
   );
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import Cursor from "@/components/Cursor";
+import { GalleryAnimation } from "@/components/GalleryAnimation";
 
 export const dmSans = DM_Sans({ subsets: ["latin"] });
 export const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
@@ -19,8 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetBrainsMono.className} antialiased font-bold overflow-clip bg-[#e2e2d1]`}
+        className={`${jetBrainsMono.className} antialiased font-bold overflow-x-clip text-slate-950 bg-tan`}
       >
+        {/* <GalleryAnimation /> */}
         <Cursor />
         <svg className="pointer-events-none absolute cursor-none">
           <filter id="grainy">
