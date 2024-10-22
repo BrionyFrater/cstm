@@ -1,14 +1,16 @@
 import { Header } from "@/components/Header";
 import { WidthCtrlWrapper } from "@/components/WidthCtrlWrapper";
+import { GalleryAnimation } from "@/components/GalleryAnimation";
 export default function Home() {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       <main className="">
+        
         <WidthCtrlWrapper>
           <section>
-            <p>Hi</p>
+          {/* <GalleryAnimation /> */}
           </section>
         </WidthCtrlWrapper>
       </main>

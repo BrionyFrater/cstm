@@ -7,7 +7,7 @@ const Cursor = () => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate3d(${e.clientX - 6}px, ${e.clientY - 6}px, 0)`;
+        cursorRef.current.style.transform = `translate3d(${e.clientX - 18}px, ${e.clientY - 18}px, 0)`;
       }
     };
 
@@ -21,7 +21,7 @@ const Cursor = () => {
   return (
     <div
       ref={cursorRef}
-      className="hidden pointer-events-none size-3 rounded-full border bg-white/80 mix-blend-difference transition-all duration-100 ease-cursorEase z-40 lg:block"
+      className="hidden pointer-events-none size-9 rounded-full border-[1px]  border-accent-orange backdrop-blur-[2px] transition-all duration-100 ease-cursorEase z-50 lg:block"
     ></div>
   );
 };

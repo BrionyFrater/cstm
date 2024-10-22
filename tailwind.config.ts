@@ -72,10 +72,7 @@ const config: Config = {
           "10%": {border: "2px solid #e45a31" },
           "100%": { width: "100%"},
         },
-      },
-      fontFamily: {
-        blocky: "var(--dm-sans)",
-      },
+      }
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

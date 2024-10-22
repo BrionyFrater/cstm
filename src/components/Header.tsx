@@ -14,7 +14,7 @@ export const Header = async () => {
       <WidthCtrlWrapper>
         <nav className="flex justify-between items-center gap-3 md:gap-16">
           <AnimatedLogo text="cstm." font={dmSans.className} />
-          <hr className="w-full border-2 border-accent-orange animate-scale-width" />
+          <hr className="w-full border-2 border-accent-orange " />
           <ul className="flex gap-2 md:gap-11">
             {user ? (
               <>
