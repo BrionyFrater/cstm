@@ -13,15 +13,15 @@ export const SlotButton = ({ text, link, className }: SlotButtonProps) => {
     <Button
       variant={"outline"}
       className={cn(
-        "group shadow-none relative overflow-clip border-transparent bg-transparent hover:border-slate-950 px-2 hover:bg-transparent",
+        "group text-white rounded-none border-none shadow-none relative overflow-clip bg-transparent px-2 text-[0.6rem] sm:text-[1rem]",
         className,
       )}
     >
       <Link href={link} className="flex flex-col items-center">
-        <p className="transition-all duration-300 ease-in-out group-hover:translate-y-[-150%]">
+        <p className="transition-all duration-300 ease-in-out group-hover:translate-y-[-170%]">
           {text}
         </p>
-        <p className="absolute ease-in-out transform translate-y-[150%] transition-all duration-300 group-hover:translate-y-0">
+        <p className="absolute ease-in-out transform translate-y-[170%] transition-all duration-300 group-hover:translate-y-0">
           {text}
         </p>
       </Link>

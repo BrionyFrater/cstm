@@ -54,6 +54,7 @@ const config: Config = {
         darkerPink: "#e1dfde",
         mutedPink: "#f4f4f4",
         tan: "#e2e2d1",
+        yellow: "#fffd71"
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -69,10 +70,10 @@ const config: Config = {
       keyframes: {
         "scale-width": {
           "0%": { width: "0", border: "none" },
-          "10%": {border: "2px solid #e45a31" },
-          "100%": { width: "100%"},
+          "10%": { border: "2px solid #e45a31" },
+          "100%": { width: "100%" },
         },
-      }
+      },
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

@@ -1,11 +1,11 @@
 import { SlotButton } from "@/components/SlotButton";
-import { dmSans } from "./layout";
+import { domine } from "./layout";
 import { Frown } from "lucide-react";
 
 export default function NotFound() {
   return (
     <div
-      className={`${dmSans.className} flex flex-col w-full h-[100vh] items-center justify-center `}
+      className={`${domine.className} flex flex-col w-full h-[100vh] items-center justify-center `}
     >
       <h3 className="text-4xl tracking-tighter font-black text-center inline-flex items-center gap-2 bg-slate-950 text-tan mx-2">
         hmmm...looks like that page doesn&apos;t exist

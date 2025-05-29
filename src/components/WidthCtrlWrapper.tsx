@@ -13,7 +13,7 @@ export const WidthCtrlWrapper = ({
   return (
     <div
       className={cn(
-        "h-full mx-auto w-full px-5 max-w-screen-2xl md:px-20",
+        "h-full mx-auto w-full px-5 max-w-[1700px] md:px-20",
         className,
       )}
     >

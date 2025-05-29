@@ -1,8 +1,7 @@
 import { WidthCtrlWrapper } from "./WidthCtrlWrapper";
-import { dmSans } from "@/app/layout";
 import { SlotButton } from "./SlotButton";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { AnimatedLogo } from "./AnimatedLogo";
+import Link from "next/link";
 
 export const Header = async () => {
   const { getUser } = getKindeServerSession();
@@ -10,26 +9,31 @@ export const Header = async () => {
   const isAdmin = user?.email == process.env.ADMIN_EMAIL;
 
   return (
-    <header className="mb-10 mt-5 sm:mt-0">
+    <header className="mb-0 mt-5 sm:mt-8 sm:mb-12 lg:mt-0 lg:mb-40">
       <WidthCtrlWrapper>
         <nav className="flex justify-between items-center gap-3 md:gap-16">
-          <AnimatedLogo text="cstm." font={dmSans.className} />
-          <hr className="w-full border-2 border-accent-orange " />
+          <Link href={"/"}>
+            <h3
+              className="leading-none text-white font-black text-sm uppercase sm:text-4xl transition-transform ease-in-out hover:scale-105"
+            >
+              cstm.
+            </h3>
+          </Link>
           <ul className="flex gap-2 md:gap-11">
             {user ? (
               <>
                 <li>
-                  <SlotButton text="Logout" link="/api/auth/logout" />
+                  <SlotButton text="logout" link="/api/auth/logout" />
                 </li>
-                <li>{isAdmin && <SlotButton text="Admin" link="/" />}</li>
+                <li>{isAdmin && <SlotButton text="admin" link="/" />}</li>
               </>
             ) : (
               <>
-                <li>
-                  <SlotButton text="Sign Up" link="/api/auth/register" />
+                <li className="flex gap-8">
+                  <SlotButton text="sign up" link="/api/auth/register" />
                 </li>
                 <li>
-                  <SlotButton text="Login" link="/api/auth/login" />
+                  <SlotButton text="login" link="/api/auth/login" />
                 </li>
               </>
             )}

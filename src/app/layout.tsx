@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Domine, Open_Sans } from "next/font/google";
 import Cursor from "@/components/Cursor";
 import { Header } from "@/components/Header";
-export const dmSans = DM_Sans({ subsets: ["latin"] });
-export const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+export const openSans = Open_Sans({ subsets: ["latin"] });
+export const domine = Domine({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${jetBrainsMono.className} antialiased font-bold overflow-x-clip text-slate-950 bg-tan`}
+        className={`${openSans.className} antialiased font-bold overflow-x-clip text-white bg-tan`}
       >
-        <Header />
         <Cursor />
+        <Header />
         <svg className="pointer-events-none absolute cursor-none">
           <filter id="grainy">
             <feTurbulence type="turbulence" baseFrequency="0.5"></feTurbulence>
@@ -30,7 +30,6 @@ export default function RootLayout({
           </filter>
         </svg>
         {children}
-
       </body>
     </html>
   );
