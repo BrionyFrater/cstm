@@ -1,11 +1,13 @@
 import { WidthCtrlWrapper } from "@/components/WidthCtrlWrapper";
 import Image from "next/image";
-import { domine } from "./layout";
+import { domine } from "@/lib/fonts";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Header } from "@/components/Header";
 export default function Home() {
   return (
     <>
+      <Header />
       <main className="">
           <section>
             <Image

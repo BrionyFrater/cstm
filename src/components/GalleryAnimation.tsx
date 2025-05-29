@@ -32,6 +32,8 @@ export const GalleryAnimation = () => {
         ease: "power4.inOut",
       });
 
+      
+
       tl.to(
         ".c-0 .item",
         {
@@ -43,6 +45,12 @@ export const GalleryAnimation = () => {
         },
         "-=2",
       );
+
+      tl.to(".hero", {
+        color: "#faf725",
+        duration: 1,
+        ease: "power3.out"
+      }, "-=1.5")
 
       tl.to(
         ".c-1 .item",
@@ -99,12 +107,6 @@ export const GalleryAnimation = () => {
         "-=2",
       );
 
-      // tl.to(".hero", {
-      //   top: 50,
-      //   duration: 1,
-      //   ease: "power3.out"
-      // }, "-=1.5")
-
       tl.autoRemoveChildren = true;
     },
     { scope: gsapScope },
@@ -112,7 +114,7 @@ export const GalleryAnimation = () => {
 
   return (
     <div ref={gsapScope}>
-      <div className="galleryCtn fixed w-full h-full flex gap-[1em]">
+      <div className="galleryCtn top-0 fixed w-full h-full flex gap-[1em]">
         {imageGroups.map((group, groupIndex) => (
           <div
             key={groupIndex}
@@ -152,7 +154,7 @@ export const GalleryAnimation = () => {
         ))}
       </div>
 
-      <div className="hero text-6xl absolute w-[95%] top-[-100%] flex items-center justify-center text-[#faf725] md:text-[20rem]">
+      <div className="hero text-6xl fixed w-full h-full flex items-center justify-center text-tan md:text-[20rem]">
         <h3>cstm.</h3>
       </div>
     </div>

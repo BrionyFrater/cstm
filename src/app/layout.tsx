@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Domine, Open_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import Cursor from "@/components/Cursor";
-import { Header } from "@/components/Header";
-export const openSans = Open_Sans({ subsets: ["latin"] });
-export const domine = Domine({ subsets: ["latin"] });
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,13 +14,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
         className={`${openSans.className} antialiased font-bold overflow-x-clip text-white bg-tan`}
       >
         <Cursor />
-        <Header />
         <svg className="pointer-events-none absolute cursor-none">
           <filter id="grainy">
             <feTurbulence type="turbulence" baseFrequency="0.5"></feTurbulence>

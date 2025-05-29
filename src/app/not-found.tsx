@@ -1,5 +1,5 @@
 import { SlotButton } from "@/components/SlotButton";
-import { domine } from "./layout";
+import { domine } from "@/lib/fonts"
 import { Frown } from "lucide-react";
 
 export default function NotFound() {
